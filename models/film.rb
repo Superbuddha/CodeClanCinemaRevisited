@@ -16,3 +16,5 @@ def save()
   values =[@title, @price]
   film = SqlRunner.run(sql, values).first
   @id = film['id'].to_i
+end
+end
