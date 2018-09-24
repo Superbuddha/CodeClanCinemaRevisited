@@ -45,4 +45,9 @@ class Film
     customers = Customer.map_items(customer_data)
     return customers
   end
+
+  def self.map_items(film_data)
+    result = film_data.map {|film| Film.new(film)}
+    return result
+  end
 end

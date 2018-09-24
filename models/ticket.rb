@@ -25,6 +25,11 @@ class Ticket
     return film
   end
 
+  def self.map_items(ticket_data)
+    result = ticket_data.map {|ticket| Ticket.new(ticket)}
+    return result
+  end
+
   def customer
     sql ="SELECT * FROM customers WHERE customers.id = $1"
     values = [@customer_id]
